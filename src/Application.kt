@@ -1,6 +1,7 @@
 package com.nubis
 
 import api.*
+import com.apple.eawt.*
 import com.nubis.api.*
 import com.nubis.model.*
 import com.nubis.model.EmojiPhrases.phrase
@@ -10,7 +11,9 @@ import com.ryanharter.ktor.moshi.*
 import freemarker.cache.*
 import hash
 import io.ktor.application.*
+import io.ktor.application.Application
 import io.ktor.auth.*
+import io.ktor.auth.Authentication.Feature.install
 import io.ktor.auth.jwt.*
 import io.ktor.features.*
 import io.ktor.freemarker.*
