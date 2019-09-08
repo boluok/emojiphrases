@@ -1,19 +1,14 @@
 package com.nubis
 
 import api.*
-import com.apple.eawt.*
 import com.nubis.api.*
 import com.nubis.model.*
-import com.nubis.model.EmojiPhrases.phrase
 import com.nubis.repository.*
-import com.nubis.routes.*
-import com.ryanharter.ktor.moshi.*
 import freemarker.cache.*
 import hash
 import io.ktor.application.*
 import io.ktor.application.Application
 import io.ktor.auth.*
-import io.ktor.auth.Authentication.Feature.install
 import io.ktor.auth.jwt.*
 import io.ktor.features.*
 import io.ktor.freemarker.*
@@ -25,7 +20,6 @@ import io.ktor.response.*
 import io.ktor.request.*
 import io.ktor.routing.*
 import java.net.*
-import java.text.*
 import java.util.concurrent.*
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
