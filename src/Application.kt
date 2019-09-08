@@ -1,9 +1,14 @@
+package com.nubis
+
 import api.*
-import com.nubis.*
 import com.nubis.api.*
 import com.nubis.model.*
+import com.nubis.model.EmojiPhrases.phrase
 import com.nubis.repository.*
+import com.nubis.routes.*
+import com.ryanharter.ktor.moshi.*
 import freemarker.cache.*
+import hash
 import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.auth.jwt.*
@@ -17,12 +22,14 @@ import io.ktor.response.*
 import io.ktor.request.*
 import io.ktor.routing.*
 import java.net.*
+import java.text.*
 import java.util.concurrent.*
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 @Suppress("unused") // Referenced in application.conf
-fun Application.module() {
+@kotlin.jvm.JvmOverloads
+fun Application.module(testing: Boolean = false) {
 
     install(DefaultHeaders)
 

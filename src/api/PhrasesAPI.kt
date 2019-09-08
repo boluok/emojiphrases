@@ -2,7 +2,7 @@ package api
 
 
 
-import API_VERSION
+import com.nubis.*
 import com.nubis.repository.*
 import io.ktor.application.call
 import io.ktor.auth.authenticate
